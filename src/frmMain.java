@@ -353,6 +353,7 @@ public class frmMain extends javax.swing.JFrame {
         
         
         }
+        cmb_Bunyi.setModel(mdl);
     }//GEN-LAST:event_cmb_motherboardMouseReleased
 
     /**
