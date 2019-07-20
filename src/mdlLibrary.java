@@ -216,7 +216,7 @@ public class mdlLibrary {
                 + "<b><u>SOLUSI:</u></b>"
                 + solutions + "</html>";
     }
-    public  String phoenix(String beepcode) {
+    public  String phoenixbios(String beepcode) {
         String problems = null, solutions = null;
         switch (beepcode) {
             case "1-1-1-1":

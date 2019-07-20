@@ -1,5 +1,6 @@
 
 import javax.swing.DefaultComboBoxModel;
+import javax.swing.JOptionPane;
 
 /*
  * To change this license header, choose License Headers in Project Properties.
@@ -45,13 +46,13 @@ public class frmMain extends javax.swing.JFrame {
         jScrollPane1.setViewportView(jTextArea1);
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
-        setTitle("Dr.mobo - Sistem Pakar Analisis Masalah Motherboard Komputer");
+        setTitle("Dr. Mobo - Sistem Pakar Analisis Masalah Motherboard Komputer");
         setResizable(false);
         setType(java.awt.Window.Type.UTILITY);
 
         jPanel1.setBorder(javax.swing.BorderFactory.createTitledBorder("Merk Motherboard"));
 
-        cmb_motherboard.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "--pilih--", "AMIBIOS", "AWARD BIOS", "DELL", "IBM BIOS", "MACINTHOSH", "PHOENIX BIOS" }));
+        cmb_motherboard.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "-- PILIH MOTHERBOARD --", "AMIBIOS", "AWARD BIOS", "DELL", "IBM BIOS", "MACINTOSH", "PHOENIX BIOS" }));
         cmb_motherboard.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseReleased(java.awt.event.MouseEvent evt) {
                 cmb_motherboardMouseReleased(evt);
@@ -67,10 +68,10 @@ public class frmMain extends javax.swing.JFrame {
         jPanel1.setLayout(jPanel1Layout);
         jPanel1Layout.setHorizontalGroup(
             jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel1Layout.createSequentialGroup()
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                .addComponent(cmb_motherboard, javax.swing.GroupLayout.PREFERRED_SIZE, 156, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(48, 48, 48))
+            .addGroup(jPanel1Layout.createSequentialGroup()
+                .addContainerGap()
+                .addComponent(cmb_motherboard, 0, 206, Short.MAX_VALUE)
+                .addContainerGap())
         );
         jPanel1Layout.setVerticalGroup(
             jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -83,15 +84,13 @@ public class frmMain extends javax.swing.JFrame {
         jPanel2.setBorder(javax.swing.BorderFactory.createTitledBorder("Pola Bunyi Beep"));
         jPanel2.setToolTipText("");
 
-        cmb_Bunyi.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Item 1", "Item 2", "Item 3", "Item 4" }));
-
         javax.swing.GroupLayout jPanel2Layout = new javax.swing.GroupLayout(jPanel2);
         jPanel2.setLayout(jPanel2Layout);
         jPanel2Layout.setHorizontalGroup(
             jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel2Layout.createSequentialGroup()
                 .addContainerGap()
-                .addComponent(cmb_Bunyi, 0, 286, Short.MAX_VALUE)
+                .addComponent(cmb_Bunyi, 0, 317, Short.MAX_VALUE)
                 .addContainerGap())
         );
         jPanel2Layout.setVerticalGroup(
@@ -99,7 +98,7 @@ public class frmMain extends javax.swing.JFrame {
             .addGroup(jPanel2Layout.createSequentialGroup()
                 .addContainerGap()
                 .addComponent(cmb_Bunyi, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(18, Short.MAX_VALUE))
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
 
         jButton1.setText("Cek");
@@ -111,6 +110,7 @@ public class frmMain extends javax.swing.JFrame {
 
         jPanel3.setBorder(javax.swing.BorderFactory.createTitledBorder("Hasil Analisis"));
 
+        txtAnalysis.setFont(new java.awt.Font("Dialog", 0, 14)); // NOI18N
         txtAnalysis.setVerticalAlignment(javax.swing.SwingConstants.TOP);
 
         javax.swing.GroupLayout jPanel3Layout = new javax.swing.GroupLayout(jPanel3);
@@ -141,14 +141,16 @@ public class frmMain extends javax.swing.JFrame {
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addComponent(jPanel3, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                     .addGroup(layout.createSequentialGroup()
-                        .addComponent(jPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, 195, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(jPanel2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(jButton1, javax.swing.GroupLayout.DEFAULT_SIZE, 76, Short.MAX_VALUE))
+                        .addComponent(jPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(0, 0, Short.MAX_VALUE))
                     .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
-                        .addGap(0, 0, Short.MAX_VALUE)
-                        .addComponent(jButton2)))
+                        .addGap(0, 242, Short.MAX_VALUE)
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(jButton2, javax.swing.GroupLayout.Alignment.TRAILING)
+                            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
+                                .addComponent(jPanel2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                .addComponent(jButton1, javax.swing.GroupLayout.PREFERRED_SIZE, 89, javax.swing.GroupLayout.PREFERRED_SIZE)))))
                 .addContainerGap())
         );
         layout.setVerticalGroup(
@@ -350,6 +352,7 @@ public class frmMain extends javax.swing.JFrame {
                 break;
         }
         cmb_Bunyi.setModel(mdl);
+        txtAnalysis.setText("");
     }//GEN-LAST:event_cmb_motherboardActionPerformed
 
     private void cmb_motherboardMouseReleased(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_cmb_motherboardMouseReleased
@@ -532,6 +535,7 @@ public class frmMain extends javax.swing.JFrame {
                 break;
         }
         cmb_Bunyi.setModel(mdl);
+        txtAnalysis.setText("");
     }//GEN-LAST:event_cmb_motherboardMouseReleased
 
     private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
@@ -539,9 +543,25 @@ public class frmMain extends javax.swing.JFrame {
         mdlLibrary lib = new mdlLibrary();
         switch(cmb_motherboard.getSelectedIndex()) {
             case 0:
+                JOptionPane.showMessageDialog(this, "Mohon pilih merk motheroard komputer yang akan dianalisis!", "Pilih motherboard", JOptionPane.ERROR_MESSAGE);
                 break;
             case 1:
                 txtAnalysis.setText(lib.amibios(String.valueOf(cmb_Bunyi.getItemAt(cmb_Bunyi.getSelectedIndex()))));
+                break;
+            case 2:
+                txtAnalysis.setText(lib.awardbios(String.valueOf(cmb_Bunyi.getItemAt(cmb_Bunyi.getSelectedIndex()))));
+                break;
+            case 3:
+                txtAnalysis.setText(lib.dell(String.valueOf(cmb_Bunyi.getItemAt(cmb_Bunyi.getSelectedIndex()))));
+                break;
+            case 4:
+                txtAnalysis.setText(lib.ibm(String.valueOf(cmb_Bunyi.getItemAt(cmb_Bunyi.getSelectedIndex()))));
+                break;
+            case 5:
+                txtAnalysis.setText(lib.macintosh(String.valueOf(cmb_Bunyi.getItemAt(cmb_Bunyi.getSelectedIndex()))));
+                break;
+            case 6:
+                txtAnalysis.setText(lib.phoenixbios(String.valueOf(cmb_Bunyi.getItemAt(cmb_Bunyi.getSelectedIndex()))));
                 break;
         }
     }//GEN-LAST:event_jButton1ActionPerformed
