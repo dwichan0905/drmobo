@@ -131,6 +131,11 @@ public class frmMain extends javax.swing.JFrame {
         );
 
         jButton2.setText("Tentang");
+        jButton2.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton2ActionPerformed(evt);
+            }
+        });
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
@@ -171,6 +176,7 @@ public class frmMain extends javax.swing.JFrame {
         jPanel2.getAccessibleContext().setAccessibleName("");
 
         pack();
+        setLocationRelativeTo(null);
     }// </editor-fold>//GEN-END:initComponents
 
     private void cmb_motherboardActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_cmb_motherboardActionPerformed
@@ -197,6 +203,7 @@ public class frmMain extends javax.swing.JFrame {
             case 2 :
                 mdl.addElement("1 Panjang, 2 Pendek");
                 mdl.addElement("1 Panjang, 3 Pendek");
+                mdl.addElement("1 Panjang, 9 Pendek");
                 mdl.addElement("Berulang tanpa henti");
                 mdl.addElement("Berulang-ulang dan bernada tinggi ketika PC dihidupkan");
                 mdl.addElement("Bunyi nada tinggi dan nada rendah berulang-ulang");
@@ -231,6 +238,12 @@ public class frmMain extends javax.swing.JFrame {
                 mdl.addElement("Bunyi keras, 4 bunyi lebih keras");
                 break;
             case 6 :
+                mdl.addElement("Dua Nada yang berbeda");
+                mdl.addElement("1-1-4");
+                mdl.addElement("1-2-1");
+                mdl.addElement("1-3-1");
+                mdl.addElement("3-1-1");
+                mdl.addElement("3-3-4");
                 mdl.addElement("1-1-1-1");
                 mdl.addElement("1-1-1-3");
                 mdl.addElement("1-1-2-1");
@@ -347,7 +360,7 @@ public class frmMain extends javax.swing.JFrame {
                 mdl.addElement("4-3-4-1");
                 mdl.addElement("4-3-4-2");
                 mdl.addElement("4-3-4-3");
-                mdl.addElement("two-tone siren");
+                
                 
                 break;
         }
@@ -380,6 +393,7 @@ public class frmMain extends javax.swing.JFrame {
             case 2 :
                 mdl.addElement("1 Panjang, 2 Pendek");
                 mdl.addElement("1 Panjang, 3 Pendek");
+                mdl.addElement("1 Panjang, 9 Pendek");
                 mdl.addElement("Berulang tanpa henti");
                 mdl.addElement("Berulang-ulang dan bernada tinggi ketika PC dihidupkan");
                 mdl.addElement("Bunyi nada tinggi dan nada rendah berulang-ulang");
@@ -414,6 +428,12 @@ public class frmMain extends javax.swing.JFrame {
                 mdl.addElement("Bunyi keras, 4 bunyi lebih keras");
                 break;
             case 6 :
+                mdl.addElement("Dua Nada yang berbeda");
+                mdl.addElement("1-1-4");
+                mdl.addElement("1-2-1");
+                mdl.addElement("1-3-1");
+                mdl.addElement("3-1-1");
+                mdl.addElement("3-3-4");
                 mdl.addElement("1-1-1-1");
                 mdl.addElement("1-1-1-3");
                 mdl.addElement("1-1-2-1");
@@ -530,7 +550,7 @@ public class frmMain extends javax.swing.JFrame {
                 mdl.addElement("4-3-4-1");
                 mdl.addElement("4-3-4-2");
                 mdl.addElement("4-3-4-3");
-                mdl.addElement("two-tone siren");
+                
                 
                 break;
         }
@@ -565,6 +585,11 @@ public class frmMain extends javax.swing.JFrame {
                 break;
         }
     }//GEN-LAST:event_jButton1ActionPerformed
+
+    private void jButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton2ActionPerformed
+        // TODO add your handling code here:
+        new about().setVisible(true);
+    }//GEN-LAST:event_jButton2ActionPerformed
 
     /**
      * @param args the command line arguments
