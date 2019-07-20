@@ -37,8 +37,7 @@ public class frmMain extends javax.swing.JFrame {
         cmb_Bunyi = new javax.swing.JComboBox<>();
         jButton1 = new javax.swing.JButton();
         jPanel3 = new javax.swing.JPanel();
-        jScrollPane2 = new javax.swing.JScrollPane();
-        jTextArea2 = new javax.swing.JTextArea();
+        txtAnalysis = new javax.swing.JLabel();
         jButton2 = new javax.swing.JButton();
 
         jTextArea1.setColumns(20);
@@ -104,12 +103,15 @@ public class frmMain extends javax.swing.JFrame {
         );
 
         jButton1.setText("Cek");
+        jButton1.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton1ActionPerformed(evt);
+            }
+        });
 
         jPanel3.setBorder(javax.swing.BorderFactory.createTitledBorder("Hasil Analisis"));
 
-        jTextArea2.setColumns(20);
-        jTextArea2.setRows(5);
-        jScrollPane2.setViewportView(jTextArea2);
+        txtAnalysis.setVerticalAlignment(javax.swing.SwingConstants.TOP);
 
         javax.swing.GroupLayout jPanel3Layout = new javax.swing.GroupLayout(jPanel3);
         jPanel3.setLayout(jPanel3Layout);
@@ -117,14 +119,15 @@ public class frmMain extends javax.swing.JFrame {
             jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel3Layout.createSequentialGroup()
                 .addContainerGap()
-                .addComponent(jScrollPane2)
+                .addComponent(txtAnalysis, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                 .addContainerGap())
         );
         jPanel3Layout.setVerticalGroup(
             jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel3Layout.createSequentialGroup()
                 .addContainerGap()
-                .addComponent(jScrollPane2, javax.swing.GroupLayout.DEFAULT_SIZE, 265, Short.MAX_VALUE))
+                .addComponent(txtAnalysis, javax.swing.GroupLayout.DEFAULT_SIZE, 253, Short.MAX_VALUE)
+                .addContainerGap())
         );
 
         jButton2.setText("Tentang");
@@ -169,11 +172,6 @@ public class frmMain extends javax.swing.JFrame {
     }// </editor-fold>//GEN-END:initComponents
 
     private void cmb_motherboardActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_cmb_motherboardActionPerformed
- // TODO add your handling code here:
-    }//GEN-LAST:event_cmb_motherboardActionPerformed
-
-    private void cmb_motherboardMouseReleased(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_cmb_motherboardMouseReleased
-        // TODO add your handling code here:
         DefaultComboBoxModel mdl = new DefaultComboBoxModel();
         switch (cmb_motherboard.getSelectedIndex() ){
             case 0 :
@@ -190,45 +188,45 @@ public class frmMain extends javax.swing.JFrame {
                 mdl.addElement("9 Pendek");
                 mdl.addElement("10 Pendek");
                 mdl.addElement("11 Pendek");
-                mdl.addElement("1 Panjang, 3 Pendek ");
-                mdl.addElement("1 Panjang , 8 Pendek");
-                mdl.addElement("two-tone siren");
+                mdl.addElement("1 Panjang, 3 Pendek");
+                mdl.addElement("1 Panjang, 8 Pendek");
+                mdl.addElement("Dua Nada yang berbeda");
                 break;
             case 2 :
                 mdl.addElement("1 Panjang, 2 Pendek");
                 mdl.addElement("1 Panjang, 3 Pendek");
-                mdl.addElement("Beep repeating endlessly");
-                mdl.addElement("Repeated high frequency beeps while PC is running");
-                mdl.addElement("Repeated beeps alternating high & low frequency");
+                mdl.addElement("Berulang tanpa henti");
+                mdl.addElement("Berulang-ulang dan bernada tinggi ketika PC dihidupkan");
+                mdl.addElement("Bunyi nada tinggi dan nada rendah berulang-ulang");
  
                 break;
             case 3 :
-                mdl.addElement("1 beeps");
-                mdl.addElement("2 beeps");
-                mdl.addElement("3 beeps");
-                mdl.addElement("4 beeps");
-                mdl.addElement("5 beeps");
-                mdl.addElement("6 beeps");
-                mdl.addElement("7 beeps");
+                mdl.addElement("1 Pendek");
+                mdl.addElement("2 Pendek");
+                mdl.addElement("3 Pendek");
+                mdl.addElement("4 Pendek");
+                mdl.addElement("5 Pendek");
+                mdl.addElement("6 Pendek");
+                mdl.addElement("7 Pendek");
                 
                 break;
             case 4 :
-                mdl.addElement("No beeps");
-                mdl.addElement("1 beep pendek");
-                mdl.addElement("2 beep pendek");
-                mdl.addElement("Continuous beep");
-                mdl.addElement("Repeating short beep");
-                mdl.addElement("1 panjang dan 1 beep pendek");
-                mdl.addElement("1 panjang dan 2 beep pendek");
-                mdl.addElement("1 panjang dan 3 beep pendek");
-                mdl.addElement("3 beep panjang");
-                mdl.addElement("1 beep, blank or incorrect display");
+                mdl.addElement("Tidak ada bunyi");
+                mdl.addElement("1 bunyi pendek");
+                mdl.addElement("2 bunyi pendek");
+                mdl.addElement("Bunyi terus-menerus");
+                mdl.addElement("Bunyi pendek berulang-ulang");
+                mdl.addElement("1 panjang dan 1 pendek");
+                mdl.addElement("1 panjang dan 2 pendek");
+                mdl.addElement("1 panjang dan 3 pendek");
+                mdl.addElement("3 panjang");
+                mdl.addElement("1 bunyi, tampilan kosong atau kacau");
                 break;
             case 5 :
-                mdl.addElement("Error tone.(two sets of different tones)");
-                mdl.addElement("Star up tone, drive spins, no video");
-                mdl.addElement("Power on, no tone");
-                mdl.addElement("High tone, four higher tones");
+                mdl.addElement("Nada Error (dua bentuk nada berbeda)");
+                mdl.addElement("Bunyi startup, putaran disk, tidak ada tampilan");
+                mdl.addElement("Power menyala, tidak ada bunyi");
+                mdl.addElement("Bunyi keras, 4 bunyi lebih keras");
                 break;
             case 6 :
                 mdl.addElement("1-1-1-1");
@@ -349,12 +347,204 @@ public class frmMain extends javax.swing.JFrame {
                 mdl.addElement("4-3-4-3");
                 mdl.addElement("two-tone siren");
                 
-                break;    
-        
-        
+                break;
+        }
+        cmb_Bunyi.setModel(mdl);
+    }//GEN-LAST:event_cmb_motherboardActionPerformed
+
+    private void cmb_motherboardMouseReleased(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_cmb_motherboardMouseReleased
+        // TODO add your handling code here:
+        DefaultComboBoxModel mdl = new DefaultComboBoxModel();
+        switch (cmb_motherboard.getSelectedIndex() ){
+            case 0 :
+                break;
+            case 1 :
+                mdl.addElement("1 Pendek");
+                mdl.addElement("2 Pendek");
+                mdl.addElement("3 Pendek");
+                mdl.addElement("4 Pendek");
+                mdl.addElement("5 Pendek");
+                mdl.addElement("6 Pendek");
+                mdl.addElement("7 Pendek");
+                mdl.addElement("8 Pendek");
+                mdl.addElement("9 Pendek");
+                mdl.addElement("10 Pendek");
+                mdl.addElement("11 Pendek");
+                mdl.addElement("1 Panjang, 3 Pendek");
+                mdl.addElement("1 Panjang, 8 Pendek");
+                mdl.addElement("Dua Nada yang berbeda");
+                break;
+            case 2 :
+                mdl.addElement("1 Panjang, 2 Pendek");
+                mdl.addElement("1 Panjang, 3 Pendek");
+                mdl.addElement("Berulang tanpa henti");
+                mdl.addElement("Berulang-ulang dan bernada tinggi ketika PC dihidupkan");
+                mdl.addElement("Bunyi nada tinggi dan nada rendah berulang-ulang");
+ 
+                break;
+            case 3 :
+                mdl.addElement("1 Pendek");
+                mdl.addElement("2 Pendek");
+                mdl.addElement("3 Pendek");
+                mdl.addElement("4 Pendek");
+                mdl.addElement("5 Pendek");
+                mdl.addElement("6 Pendek");
+                mdl.addElement("7 Pendek");
+                
+                break;
+            case 4 :
+                mdl.addElement("Tidak ada bunyi");
+                mdl.addElement("1 bunyi pendek");
+                mdl.addElement("2 bunyi pendek");
+                mdl.addElement("Bunyi terus-menerus");
+                mdl.addElement("Bunyi pendek berulang-ulang");
+                mdl.addElement("1 panjang dan 1 pendek");
+                mdl.addElement("1 panjang dan 2 pendek");
+                mdl.addElement("1 panjang dan 3 pendek");
+                mdl.addElement("3 panjang");
+                mdl.addElement("1 bunyi, tampilan kosong atau kacau");
+                break;
+            case 5 :
+                mdl.addElement("Nada Error (dua bentuk nada berbeda)");
+                mdl.addElement("Bunyi startup, putaran disk, tidak ada tampilan");
+                mdl.addElement("Power menyala, tidak ada bunyi");
+                mdl.addElement("Bunyi keras, 4 bunyi lebih keras");
+                break;
+            case 6 :
+                mdl.addElement("1-1-1-1");
+                mdl.addElement("1-1-1-3");
+                mdl.addElement("1-1-2-1");
+                mdl.addElement("1-1-2-3");
+                mdl.addElement("1-1-3-1");
+                mdl.addElement("1-1-3-2");
+                mdl.addElement("1-1-3-3");
+                mdl.addElement("1-1-4-1");
+                mdl.addElement("1-1-4-3");
+                mdl.addElement("1-2-1-1");
+                mdl.addElement("1-2-1-2");
+                mdl.addElement("1-2-1-3");
+                mdl.addElement("1-2-2-1");
+                mdl.addElement("1-2-2-3");
+                mdl.addElement("1-2-3-1");
+                mdl.addElement("1-2-3-3");
+                mdl.addElement("1-2-4-1");
+                mdl.addElement("1-3-1-1");
+                mdl.addElement("1-3-1-3");
+                mdl.addElement("1-3-2-1");
+                mdl.addElement("1-3-3-1");
+                mdl.addElement("1-3-3-3");
+                mdl.addElement("1-3-4-1");
+                mdl.addElement("1-3-4-3");
+                mdl.addElement("1-4-1-3");
+                mdl.addElement("1-4-2-4");
+                mdl.addElement("1-4-3-1");
+                mdl.addElement("1-4-3-2");
+                mdl.addElement("1-4-3-3");
+                mdl.addElement("1-4-4-1");
+                mdl.addElement("1-4-4-2");
+                mdl.addElement("2-1-1-1");
+                mdl.addElement("2-1-1-3");
+                mdl.addElement("2-1-2-1");
+                mdl.addElement("2-1-2-3");
+                mdl.addElement("2-1-2-4");
+                mdl.addElement("2-1-3-1");
+                mdl.addElement("2-1-3-2");
+                mdl.addElement("2-1-3-3");
+                mdl.addElement("2-1-4-1");
+                mdl.addElement("2-1-4-3");
+                mdl.addElement("2-2-1-1");
+                mdl.addElement("2-2-1-3");
+                mdl.addElement("2-2-2-1");
+                mdl.addElement("2-2-2-3");
+                mdl.addElement("2-2-3-1");
+                mdl.addElement("2-2-3-3");
+                mdl.addElement("2-2-4-1");
+                mdl.addElement("2-3-1-1");
+                mdl.addElement("2-3-1-3");
+                mdl.addElement("2-3-2-1");
+                mdl.addElement("2-3-2-3");
+                mdl.addElement("2-3-3-1");
+                mdl.addElement("2-3-3-3");
+                mdl.addElement("2-3-4-1");
+                mdl.addElement("2-3-4-3");
+                mdl.addElement("2-4-1-1");
+                mdl.addElement("2-4-1-3");
+                mdl.addElement("2-4-2-1");
+                mdl.addElement("2-4-2-3");
+                mdl.addElement("2-4-4-1");
+                mdl.addElement("2-4-4-3");
+                mdl.addElement("3-1-1-1");
+                mdl.addElement("3-1-1-3");
+                mdl.addElement("3-1-2-1");
+                mdl.addElement("3-1-2-3");
+                mdl.addElement("3-1-3-1");
+                mdl.addElement("3-1-3-3");
+                mdl.addElement("3-1-4-1");
+                mdl.addElement("3-1-4-1");
+                mdl.addElement("3-2-1-1");
+                mdl.addElement("3-2-1-2");
+                mdl.addElement("3-2-1-3");
+                mdl.addElement("3-2-2-1");
+                mdl.addElement("3-2-2-3");
+                mdl.addElement("3-2-3-1");
+                mdl.addElement("3-2-3-3");
+                mdl.addElement("3-2-4-1");
+                mdl.addElement("3-2-4-3");
+                mdl.addElement("3-3-1-1");
+                mdl.addElement("3-3-1-3");
+                mdl.addElement("3-3-3-1");
+                mdl.addElement("3-3-3-3");
+                mdl.addElement("3-3-4-1");
+                mdl.addElement("3-3-4-3");
+                mdl.addElement("3-4-1-1");
+                mdl.addElement("3-4-1-3");
+                mdl.addElement("3-4-2-1");
+                mdl.addElement("3-4-2-3");
+                mdl.addElement("3-4-3-1");
+                mdl.addElement("3-4-4-1");
+                mdl.addElement("3-4-4-3");
+                mdl.addElement("3-4-4-4");
+                
+                mdl.addElement("4-1-1-1");
+                mdl.addElement("4-2-1-1");
+                mdl.addElement("4-2-1-3");
+                mdl.addElement("4-2-2-1");
+                mdl.addElement("4-2-2-3");
+                mdl.addElement("4-2-3-1");
+                mdl.addElement("4-2-3-3");
+                mdl.addElement("4-2-4-1");
+                mdl.addElement("4-3-1-3");
+                mdl.addElement("4-3-1-4");
+                mdl.addElement("4-3-2-1");
+                
+                mdl.addElement("4-3-2-2");
+                mdl.addElement("4-3-2-3");
+                mdl.addElement("4-3-2-4");
+                mdl.addElement("4-3-3-1");
+                mdl.addElement("4-3-3-2");
+                mdl.addElement("4-3-3-3");
+                mdl.addElement("4-3-3-4");
+                mdl.addElement("4-3-4-1");
+                mdl.addElement("4-3-4-2");
+                mdl.addElement("4-3-4-3");
+                mdl.addElement("two-tone siren");
+                
+                break;
         }
         cmb_Bunyi.setModel(mdl);
     }//GEN-LAST:event_cmb_motherboardMouseReleased
+
+    private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
+        // TODO add your handling code here:
+        mdlLibrary lib = new mdlLibrary();
+        switch(cmb_motherboard.getSelectedIndex()) {
+            case 0:
+                break;
+            case 1:
+                txtAnalysis.setText(lib.amibios(String.valueOf(cmb_Bunyi.getItemAt(cmb_Bunyi.getSelectedIndex()))));
+                break;
+        }
+    }//GEN-LAST:event_jButton1ActionPerformed
 
     /**
      * @param args the command line arguments
@@ -400,8 +590,7 @@ public class frmMain extends javax.swing.JFrame {
     private javax.swing.JPanel jPanel2;
     private javax.swing.JPanel jPanel3;
     private javax.swing.JScrollPane jScrollPane1;
-    private javax.swing.JScrollPane jScrollPane2;
     private javax.swing.JTextArea jTextArea1;
-    private javax.swing.JTextArea jTextArea2;
+    private javax.swing.JLabel txtAnalysis;
     // End of variables declaration//GEN-END:variables
 }

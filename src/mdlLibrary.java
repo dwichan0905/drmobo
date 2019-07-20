@@ -9,7 +9,7 @@
  * @author Dwi Candra Permana
  */
 public class mdlLibrary {
-    public static String amibios(String beepcode) {
+    public  String amibios(String beepcode) {
         String problems = null, solutions = null;
         switch (beepcode) {
             case "1 Pendek":
@@ -70,12 +70,12 @@ public class mdlLibrary {
                 break;
         }
         return "<html><b><u>MASALAH:</u></b><br>"
-                + problems + "<br>"
+                + problems + "<br><br>"
                 + "<b><u>SOLUSI:</u></b>"
                 + solutions + "</html>";
     }
     
-    public static String awardbios(String beepcode) {
+    public  String awardbios(String beepcode) {
         String problems = null, solutions = null;
         switch (beepcode) {
             case "1 Panjang, 2 Pendek":
@@ -100,12 +100,12 @@ public class mdlLibrary {
                 break;
         }
         return "<html><b><u>MASALAH:</u></b><br>"
-                + problems + "<br>"
+                + problems + "<br><br>"
                 + "<b><u>SOLUSI:</u></b>"
                 + solutions + "</html>";
     }
     
-    public static String dell(String beepcode) {
+    public  String dell(String beepcode) {
         String problems = null, solutions = null;
         switch (beepcode) {
             case "1 Pendek":
@@ -138,11 +138,11 @@ public class mdlLibrary {
                 break;
         }
         return "<html><b><u>MASALAH:</u></b><br>"
-                + problems + "<br>"
+                + problems + "<br><br>"
                 + "<b><u>SOLUSI:</u></b>"
                 + solutions + "</html>";
     }
-    public static String ibm(String beepcode) {
+    public  String ibm(String beepcode) {
         String problems = null, solutions = null;
         switch (beepcode) {
             case "Tidak ada bunyi":
@@ -157,7 +157,7 @@ public class mdlLibrary {
                 problems = "POST ERROR";
                 solutions = "Lihat pada layar untuk keterangan errornya.";
                 break;
-            case "Bunyi Berlanjut":
+            case "Bunyi terus-menerus":
                 problems = "No power, loose card, or short";
                 solutions = "";
                 break;
@@ -187,11 +187,11 @@ public class mdlLibrary {
                 break;
         }
         return "<html><b><u>MASALAH:</u></b><br>"
-                + problems + "<br>"
+                + problems + "<br><br>"
                 + "<b><u>SOLUSI:</u></b>"
                 + solutions + "</html>";
     }
-    public static String macintosh(String beepcode) {
+    public  String macintosh(String beepcode) {
         String problems = null, solutions = null;
         switch (beepcode) {
             case "Nada Error (dua bentuk nada berbeda)":
@@ -212,11 +212,11 @@ public class mdlLibrary {
                 break;
         }
         return "<html><b><u>MASALAH:</u></b><br>"
-                + problems + "<br>"
+                + problems + "<br><br>"
                 + "<b><u>SOLUSI:</u></b>"
                 + solutions + "</html>";
     }
-    public static String phoenix(String beepcode) {
+    public  String phoenix(String beepcode) {
         String problems = null, solutions = null;
         switch (beepcode) {
             case "1-1-1-1":
@@ -385,7 +385,7 @@ public class mdlLibrary {
                 break;
         }
         return "<html><b><u>MASALAH:</u></b><br>"
-                + problems + "<br>"
+                + problems + "<br><br>"
                 + "<b><u>SOLUSI:</u></b>"
                 + solutions + "</html>";
     }
