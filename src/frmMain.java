@@ -1,4 +1,5 @@
 
+import java.awt.Toolkit;
 import javax.swing.DefaultComboBoxModel;
 import javax.swing.JOptionPane;
 
@@ -13,6 +14,8 @@ import javax.swing.JOptionPane;
  * @author Dwi Candra Permana
  */
 public class frmMain extends javax.swing.JFrame {
+    
+    private about ab;
 
     /**
      * Creates new form frmMain
@@ -126,7 +129,7 @@ public class frmMain extends javax.swing.JFrame {
             jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel3Layout.createSequentialGroup()
                 .addContainerGap()
-                .addComponent(txtAnalysis, javax.swing.GroupLayout.DEFAULT_SIZE, 253, Short.MAX_VALUE)
+                .addComponent(txtAnalysis, javax.swing.GroupLayout.DEFAULT_SIZE, 267, Short.MAX_VALUE)
                 .addContainerGap())
         );
 
@@ -151,26 +154,26 @@ public class frmMain extends javax.swing.JFrame {
                     .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
                         .addGap(0, 242, Short.MAX_VALUE)
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(jButton2, javax.swing.GroupLayout.Alignment.TRAILING)
                             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
                                 .addComponent(jPanel2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                .addComponent(jButton1, javax.swing.GroupLayout.PREFERRED_SIZE, 89, javax.swing.GroupLayout.PREFERRED_SIZE)))))
+                                .addComponent(jButton1, javax.swing.GroupLayout.PREFERRED_SIZE, 89, javax.swing.GroupLayout.PREFERRED_SIZE))
+                            .addComponent(jButton2, javax.swing.GroupLayout.Alignment.TRAILING))))
                 .addContainerGap())
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
                 .addContainerGap()
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(jPanel2, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                    .addComponent(jPanel1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
+                    .addComponent(jPanel2, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addComponent(jPanel1, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                     .addComponent(jButton1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(jPanel3, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addComponent(jPanel3, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(jButton2)
-                .addGap(19, 19, 19))
+                .addContainerGap())
         );
 
         jPanel2.getAccessibleContext().setAccessibleName("");
@@ -201,10 +204,12 @@ public class frmMain extends javax.swing.JFrame {
                 mdl.addElement("Dua Nada yang berbeda");
                 break;
             case 2 :
+                mdl.addElement("2 Pendek");
                 mdl.addElement("1 Panjang, 2 Pendek");
                 mdl.addElement("1 Panjang, 3 Pendek");
                 mdl.addElement("1 Panjang, 9 Pendek");
-                mdl.addElement("Berulang tanpa henti");
+                mdl.addElement("Bunyi Pendek berulang-ulang tanpa henti");
+                mdl.addElement("1 Bunyi Panjang tanpa henti");
                 mdl.addElement("Berulang-ulang dan bernada tinggi ketika PC dihidupkan");
                 mdl.addElement("Bunyi nada tinggi dan nada rendah berulang-ulang");
  
@@ -244,122 +249,13 @@ public class frmMain extends javax.swing.JFrame {
                 mdl.addElement("1-3-1");
                 mdl.addElement("3-1-1");
                 mdl.addElement("3-3-4");
-                mdl.addElement("1-1-1-1");
-                mdl.addElement("1-1-1-3");
-                mdl.addElement("1-1-2-1");
-                mdl.addElement("1-1-2-3");
-                mdl.addElement("1-1-3-1");
-                mdl.addElement("1-1-3-2");
-                mdl.addElement("1-1-3-3");
                 mdl.addElement("1-1-4-1");
-                mdl.addElement("1-1-4-3");
-                mdl.addElement("1-2-1-1");
-                mdl.addElement("1-2-1-2");
-                mdl.addElement("1-2-1-3");
-                mdl.addElement("1-2-2-1");
                 mdl.addElement("1-2-2-3");
-                mdl.addElement("1-2-3-1");
-                mdl.addElement("1-2-3-3");
-                mdl.addElement("1-2-4-1");
                 mdl.addElement("1-3-1-1");
                 mdl.addElement("1-3-1-3");
-                mdl.addElement("1-3-2-1");
-                mdl.addElement("1-3-3-1");
-                mdl.addElement("1-3-3-3");
                 mdl.addElement("1-3-4-1");
                 mdl.addElement("1-3-4-3");
-                mdl.addElement("1-4-1-3");
-                mdl.addElement("1-4-2-4");
-                mdl.addElement("1-4-3-1");
-                mdl.addElement("1-4-3-2");
-                mdl.addElement("1-4-3-3");
-                mdl.addElement("1-4-4-1");
-                mdl.addElement("1-4-4-2");
-                mdl.addElement("2-1-1-1");
-                mdl.addElement("2-1-1-3");
-                mdl.addElement("2-1-2-1");
-                mdl.addElement("2-1-2-3");
-                mdl.addElement("2-1-2-4");
-                mdl.addElement("2-1-3-1");
-                mdl.addElement("2-1-3-2");
-                mdl.addElement("2-1-3-3");
-                mdl.addElement("2-1-4-1");
-                mdl.addElement("2-1-4-3");
-                mdl.addElement("2-2-1-1");
-                mdl.addElement("2-2-1-3");
-                mdl.addElement("2-2-2-1");
-                mdl.addElement("2-2-2-3");
-                mdl.addElement("2-2-3-1");
-                mdl.addElement("2-2-3-3");
-                mdl.addElement("2-2-4-1");
-                mdl.addElement("2-3-1-1");
-                mdl.addElement("2-3-1-3");
-                mdl.addElement("2-3-2-1");
-                mdl.addElement("2-3-2-3");
-                mdl.addElement("2-3-3-1");
-                mdl.addElement("2-3-3-3");
-                mdl.addElement("2-3-4-1");
-                mdl.addElement("2-3-4-3");
-                mdl.addElement("2-4-1-1");
-                mdl.addElement("2-4-1-3");
-                mdl.addElement("2-4-2-1");
-                mdl.addElement("2-4-2-3");
-                mdl.addElement("2-4-4-1");
-                mdl.addElement("2-4-4-3");
-                mdl.addElement("3-1-1-1");
-                mdl.addElement("3-1-1-3");
-                mdl.addElement("3-1-2-1");
-                mdl.addElement("3-1-2-3");
-                mdl.addElement("3-1-3-1");
-                mdl.addElement("3-1-3-3");
-                mdl.addElement("3-1-4-1");
-                mdl.addElement("3-1-4-1");
-                mdl.addElement("3-2-1-1");
-                mdl.addElement("3-2-1-2");
-                mdl.addElement("3-2-1-3");
-                mdl.addElement("3-2-2-1");
-                mdl.addElement("3-2-2-3");
-                mdl.addElement("3-2-3-1");
-                mdl.addElement("3-2-3-3");
-                mdl.addElement("3-2-4-1");
-                mdl.addElement("3-2-4-3");
-                mdl.addElement("3-3-1-1");
-                mdl.addElement("3-3-1-3");
-                mdl.addElement("3-3-3-1");
-                mdl.addElement("3-3-3-3");
-                mdl.addElement("3-3-4-1");
-                mdl.addElement("3-3-4-3");
-                mdl.addElement("3-4-1-1");
-                mdl.addElement("3-4-1-3");
-                mdl.addElement("3-4-2-1");
-                mdl.addElement("3-4-2-3");
-                mdl.addElement("3-4-3-1");
-                mdl.addElement("3-4-4-1");
-                mdl.addElement("3-4-4-3");
-                mdl.addElement("3-4-4-4");
-                
-                mdl.addElement("4-1-1-1");
-                mdl.addElement("4-2-1-1");
-                mdl.addElement("4-2-1-3");
-                mdl.addElement("4-2-2-1");
-                mdl.addElement("4-2-2-3");
-                mdl.addElement("4-2-3-1");
-                mdl.addElement("4-2-3-3");
-                mdl.addElement("4-2-4-1");
-                mdl.addElement("4-3-1-3");
-                mdl.addElement("4-3-1-4");
-                mdl.addElement("4-3-2-1");
-                
-                mdl.addElement("4-3-2-2");
-                mdl.addElement("4-3-2-3");
-                mdl.addElement("4-3-2-4");
-                mdl.addElement("4-3-3-1");
-                mdl.addElement("4-3-3-2");
-                mdl.addElement("4-3-3-3");
-                mdl.addElement("4-3-3-4");
-                mdl.addElement("4-3-4-1");
-                mdl.addElement("4-3-4-2");
-                mdl.addElement("4-3-4-3");
+                mdl.addElement("1-4-1-1");
                 
                 
                 break;
@@ -391,10 +287,12 @@ public class frmMain extends javax.swing.JFrame {
                 mdl.addElement("Dua Nada yang berbeda");
                 break;
             case 2 :
+                mdl.addElement("2 Pendek");
                 mdl.addElement("1 Panjang, 2 Pendek");
                 mdl.addElement("1 Panjang, 3 Pendek");
                 mdl.addElement("1 Panjang, 9 Pendek");
-                mdl.addElement("Berulang tanpa henti");
+                mdl.addElement("Bunyi Pendek berulang-ulang tanpa henti");
+                mdl.addElement("1 Bunyi Panjang tanpa henti");
                 mdl.addElement("Berulang-ulang dan bernada tinggi ketika PC dihidupkan");
                 mdl.addElement("Bunyi nada tinggi dan nada rendah berulang-ulang");
  
@@ -434,123 +332,13 @@ public class frmMain extends javax.swing.JFrame {
                 mdl.addElement("1-3-1");
                 mdl.addElement("3-1-1");
                 mdl.addElement("3-3-4");
-                mdl.addElement("1-1-1-1");
-                mdl.addElement("1-1-1-3");
-                mdl.addElement("1-1-2-1");
-                mdl.addElement("1-1-2-3");
-                mdl.addElement("1-1-3-1");
-                mdl.addElement("1-1-3-2");
-                mdl.addElement("1-1-3-3");
                 mdl.addElement("1-1-4-1");
-                mdl.addElement("1-1-4-3");
-                mdl.addElement("1-2-1-1");
-                mdl.addElement("1-2-1-2");
-                mdl.addElement("1-2-1-3");
-                mdl.addElement("1-2-2-1");
                 mdl.addElement("1-2-2-3");
-                mdl.addElement("1-2-3-1");
-                mdl.addElement("1-2-3-3");
-                mdl.addElement("1-2-4-1");
                 mdl.addElement("1-3-1-1");
                 mdl.addElement("1-3-1-3");
-                mdl.addElement("1-3-2-1");
-                mdl.addElement("1-3-3-1");
-                mdl.addElement("1-3-3-3");
                 mdl.addElement("1-3-4-1");
                 mdl.addElement("1-3-4-3");
-                mdl.addElement("1-4-1-3");
-                mdl.addElement("1-4-2-4");
-                mdl.addElement("1-4-3-1");
-                mdl.addElement("1-4-3-2");
-                mdl.addElement("1-4-3-3");
-                mdl.addElement("1-4-4-1");
-                mdl.addElement("1-4-4-2");
-                mdl.addElement("2-1-1-1");
-                mdl.addElement("2-1-1-3");
-                mdl.addElement("2-1-2-1");
-                mdl.addElement("2-1-2-3");
-                mdl.addElement("2-1-2-4");
-                mdl.addElement("2-1-3-1");
-                mdl.addElement("2-1-3-2");
-                mdl.addElement("2-1-3-3");
-                mdl.addElement("2-1-4-1");
-                mdl.addElement("2-1-4-3");
-                mdl.addElement("2-2-1-1");
-                mdl.addElement("2-2-1-3");
-                mdl.addElement("2-2-2-1");
-                mdl.addElement("2-2-2-3");
-                mdl.addElement("2-2-3-1");
-                mdl.addElement("2-2-3-3");
-                mdl.addElement("2-2-4-1");
-                mdl.addElement("2-3-1-1");
-                mdl.addElement("2-3-1-3");
-                mdl.addElement("2-3-2-1");
-                mdl.addElement("2-3-2-3");
-                mdl.addElement("2-3-3-1");
-                mdl.addElement("2-3-3-3");
-                mdl.addElement("2-3-4-1");
-                mdl.addElement("2-3-4-3");
-                mdl.addElement("2-4-1-1");
-                mdl.addElement("2-4-1-3");
-                mdl.addElement("2-4-2-1");
-                mdl.addElement("2-4-2-3");
-                mdl.addElement("2-4-4-1");
-                mdl.addElement("2-4-4-3");
-                mdl.addElement("3-1-1-1");
-                mdl.addElement("3-1-1-3");
-                mdl.addElement("3-1-2-1");
-                mdl.addElement("3-1-2-3");
-                mdl.addElement("3-1-3-1");
-                mdl.addElement("3-1-3-3");
-                mdl.addElement("3-1-4-1");
-                mdl.addElement("3-1-4-1");
-                mdl.addElement("3-2-1-1");
-                mdl.addElement("3-2-1-2");
-                mdl.addElement("3-2-1-3");
-                mdl.addElement("3-2-2-1");
-                mdl.addElement("3-2-2-3");
-                mdl.addElement("3-2-3-1");
-                mdl.addElement("3-2-3-3");
-                mdl.addElement("3-2-4-1");
-                mdl.addElement("3-2-4-3");
-                mdl.addElement("3-3-1-1");
-                mdl.addElement("3-3-1-3");
-                mdl.addElement("3-3-3-1");
-                mdl.addElement("3-3-3-3");
-                mdl.addElement("3-3-4-1");
-                mdl.addElement("3-3-4-3");
-                mdl.addElement("3-4-1-1");
-                mdl.addElement("3-4-1-3");
-                mdl.addElement("3-4-2-1");
-                mdl.addElement("3-4-2-3");
-                mdl.addElement("3-4-3-1");
-                mdl.addElement("3-4-4-1");
-                mdl.addElement("3-4-4-3");
-                mdl.addElement("3-4-4-4");
-                
-                mdl.addElement("4-1-1-1");
-                mdl.addElement("4-2-1-1");
-                mdl.addElement("4-2-1-3");
-                mdl.addElement("4-2-2-1");
-                mdl.addElement("4-2-2-3");
-                mdl.addElement("4-2-3-1");
-                mdl.addElement("4-2-3-3");
-                mdl.addElement("4-2-4-1");
-                mdl.addElement("4-3-1-3");
-                mdl.addElement("4-3-1-4");
-                mdl.addElement("4-3-2-1");
-                
-                mdl.addElement("4-3-2-2");
-                mdl.addElement("4-3-2-3");
-                mdl.addElement("4-3-2-4");
-                mdl.addElement("4-3-3-1");
-                mdl.addElement("4-3-3-2");
-                mdl.addElement("4-3-3-3");
-                mdl.addElement("4-3-3-4");
-                mdl.addElement("4-3-4-1");
-                mdl.addElement("4-3-4-2");
-                mdl.addElement("4-3-4-3");
-                
+                mdl.addElement("1-4-1-1");
                 
                 break;
         }
@@ -561,8 +349,10 @@ public class frmMain extends javax.swing.JFrame {
     private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
         // TODO add your handling code here:
         mdlLibrary lib = new mdlLibrary();
+        
         switch(cmb_motherboard.getSelectedIndex()) {
             case 0:
+                Toolkit.getDefaultToolkit().beep();
                 JOptionPane.showMessageDialog(this, "Mohon pilih merk motheroard komputer yang akan dianalisis!", "Pilih motherboard", JOptionPane.ERROR_MESSAGE);
                 break;
             case 1:
@@ -588,7 +378,8 @@ public class frmMain extends javax.swing.JFrame {
 
     private void jButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton2ActionPerformed
         // TODO add your handling code here:
-        new about().setVisible(true);
+        ab = new about();
+        ab.setVisible(true);
     }//GEN-LAST:event_jButton2ActionPerformed
 
     /**

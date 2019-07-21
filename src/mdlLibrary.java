@@ -124,6 +124,10 @@ public class mdlLibrary {
     public  String awardbios(String beepcode) {
         String problems = null, solutions = null;
         switch (beepcode) {
+            case "2 Pendek":
+                problems = "Non-Fatal Error";
+                solutions = "Periksa posisi RAM dan kondisi komponen yang lain";
+                break;
             case "1 Panjang, 2 Pendek":
                 problems = "Display/Video Error";
                 solutions = "BIOS tidak dapat menampilkan informasi apapun. Ganti VGA yang terpasang";
@@ -136,7 +140,11 @@ public class mdlLibrary {
                 problems = "Motherboard issues.";
                 solutions = "Ganti Chipset BIOS";
                 break;
-            case "Berulang tanpa henti":
+            case "Bunyi Pendek berulang-ulang tanpa henti":
+                problems = "Power Supply Unit (PSU) issues";
+                solutions = "Segera matikan komputer dan jangan mencoba menyalakan kembali karena beresiko kerusakan fisik (terbakarnya) komponen motherboard. Solusinya, belikan PSU yang baru";
+                break;
+            case "1 Bunyi Panjang tanpa henti":
                 problems = "Base 64K RAM Failure";
                 solutions = "1. Bersihkan RAM<br>"
                         + "2. Gantikan salah satu RAM dengan yang baru<br>"
@@ -325,72 +333,12 @@ public class mdlLibrary {
                 problems = "Graphic Card issues";
                 solutions = "Pasangkan VGA dengan benar, atau ganti VGA";
                 break;
-            case "1-1-1-1":
-                problems = "Bunyi beep belum dikonfirmasi";
-                solutions = "Pasang ulang RAM atau ganti RAM yang bermasalah.";
-                break;
-            case "1-1-1-3":
-                problems = "Verify real mode";
-                solutions = "";
-                break;
-            case "1-1-2-1":
-                problems = "Get CPU type";
-                solutions = "";
-                break;
-            case "1-1-2-3":
-                problems = "Initialize system hardware";
-                solutions = "";
-                break;
-            case "1-1-3-1":
-                problems = "Initialize chipset registers with initial POST values";
-                solutions = "";
-                break;
-            case "1-1-3-2":
-                problems = "Set in POST flag";
-                solutions = "";
-                break;
-            case "1-1-3-3":
-                problems = "Initialize CPU registers";
-                solutions = "";
-                break;
             case "1-1-4-1":
-                problems = "Initialize cache to initial POST values";
-                solutions = "";
-                break;
-            case "1-1-4-3":
-                problems = "Initialize I/O";
-                solutions = "";
-                break;
-            case "1-2-1-1":
-                problems = "Initialize power management";
-                solutions = "";
-                break;
-            case "1-2-1-2":
-                problems = "Load alternate registers with initial POST values";
-                solutions = "";
-                break;
-            case "1-2-1-3":
-                problems = "Jump to UserPatch0";
-                solutions = "";
-                break;
-            case "1-2-2-1":
-                problems = "Initialize keyboard controller";
+                problems = "Initialize cache to initial POST values (Level 2)";
                 solutions = "";
                 break;
             case "1-2-2-3":
                 problems = "BIOS ROM checksum";
-                solutions = "";
-                break;
-            case "1-2-3-1":
-                problems = "8254 timer initialization";
-                solutions = "";
-                break;
-            case "1-2-3-3":
-                problems = "8237 DMA controller initialization";
-                solutions = "";
-                break;
-            case "1-2-4-1":
-                problems = "Reset programmable interrupt controller";
                 solutions = "";
                 break;
             case "1-3-1-1":
@@ -401,176 +349,20 @@ public class mdlLibrary {
                 problems = "Test 8742 keyboard controller";
                 solutions = "";
                 break;
-            case "1-3-2-1":
-                problems = "Set ES segment to register to 4 GB";
-                solutions = "";
-                break;
-            case "1-3-3-1":
-                problems = "Autosize DRAM";
-                solutions = "";
-                break;
-            case "1-3-3-3":
-                problems = "Clear 512 K base RAM";
-                solutions = "";
-                break;
             case "1-3-4-1":
-                problems = "Test 512 base address lines";
-                solutions = "";
+                problems = "Test 512 base address lines (Failed)";
+                solutions = "Gunakan fasilitas Memory Check untuk melihat kesalahan pada baris alamat keberapa yang gagal dites.";
                 break;
             case "1-3-4-3":
                 problems = "Test 512 K base memory";
-                solutions = "";
+                solutions = "Gunakan fasilitas Memory Check untuk melihat kesalahan pada bit berapa (rendah) yang gagal dites.";
                 break;
-            case "1-4-1-3":
+            case "1-4-1-1":
                 problems = "Test CPU bus clock frequency";
-                solutions = "";
-                break;
-            case "1-4-2-4":
-                problems = "Reinitialize the chipset";
-                solutions = "";
-                break;
-            case "1-4-3-1":
-                problems = "Shadow system BIOS ROM";
-                solutions = "";
-                break;
-            case "1-4-3-2":
-                problems = "Reinitialize the cache";
-                solutions = "";
-                break;
-            case "1-4-3-3":
-                problems = "Autosize cache";
-                solutions = "";
-                break;
-            case "1-4-4-1":
-                problems = "Configure advanced chipset registers";
-                solutions = "";
-                break;
-            case "1-4-4-2":
-                problems = "Load alternate registers with CMOS values.";
-                solutions = "";
-                break;
-            case "2-1-1-1":
-                problems = "Set initial CPU speed";
-                solutions = "";
-                break;
-            case "2-1-1-3":
-                problems = "Initialize interrupt vectors";
-                solutions = "";
-                break;
-            case "2-1-2-1":
-                problems = "Initialize BIOS interrupts";
-                solutions = "";
+                solutions = "Gunakan fasilitas Memory Check untuk melihat kesalahan pada bit berapa (rendah) yang gagal dites.";
                 break;
             case "2-1-2-3":
                 problems = "Check ROM Copyright notice";
-                solutions = "";
-                break;
-            case "2-1-2-4":
-                problems = "Initialize manager for PCI options ROMs";
-                solutions = "";
-                break;
-            case "2-1-3-1":
-                problems = "Check video configuration against CMOS";
-                solutions = "";
-                break;
-            case "2-1-3-2":
-                problems = "Initialize PCI bus and devices";
-                solutions = "";
-                break;
-            case "2-1-3-3":
-                problems = "Initialize all video adapters in system";
-                solutions = "";
-                break;
-            case "2-1-4-1":
-                problems = "Shadow video BIOS ROM";
-                solutions = "";
-                break;
-            case "2-1-4-3":
-                problems = "Display Copyright notice";
-                solutions = "";
-                break;
-            case "2-2-1-1":
-                problems = "Display CPU type and speed";
-                solutions = "";
-                break;
-            case "2-2-1-3":
-                problems = "Test keyboard";
-                solutions = "";
-                break;
-            case "2-2-2-1":
-                problems = "Set key click if enabled";
-                solutions = "";
-                break;
-            case "2-2-2-3":
-                problems = "Enable keyboard";
-                solutions = "";
-                break;
-            case "2-2-3-1":
-                problems = "Test for unexpected interrupts";
-                solutions = "";
-                break;
-            case "2-2-3-3":
-                problems = "Display prompt Press F2 to enter SETUP";
-                solutions = "";
-                break;
-            case "2-2-4-1":
-                problems = "Test RAM between 512 and 640 k";
-                solutions = "";
-                break;
-            case "2-3-1-1":
-                problems = "Test expanded memory";
-                solutions = "";
-                break;
-            case "2-3-1-3":
-                problems = "Test extended memory address lines";
-                solutions = "";
-                break;
-            case "2-3-2-1":
-                problems = "Jump to UserPatch1";
-                solutions = "";
-                break;
-            case "2-3-2-3":
-                problems = "Configure advanced cache registers";
-                solutions = "";
-                break;
-            case "2-3-3-1":
-                problems = "Enable external and CPU caches";
-                solutions = "";
-                break;
-            case "2-3-3-3":
-                problems = "Display external cache size";
-                solutions = "";
-                break;
-            case "2-3-4-1":
-                problems = "Display shadow message";
-                solutions = "";
-                break;
-            case "2-3-4-3":
-                problems = "Display non-disposable segments";
-                solutions = "";
-                break;
-            case "2-4-1-1":
-                problems = "Display error messages";
-                solutions = "Periksa output pada layar";
-                break;
-            case "2-4-1-3":
-                problems = "Check for configuration errors";
-                solutions = "";
-                break;
-            case "2-4-2-1":
-                problems = "Test real-time clock";
-                solutions = "";
-                break;
-            case "2-4-2-3":
-                problems = "Check for keyboard errors";
-                solutions = "";
-                break;
-            case "2-4-4-1":
-                problems = "Set up hardware interrupts vectors";
-                solutions = "";
-                break;
-            case "2-4-4-3":
-                problems = "Test coprocessor if present";
                 solutions = "";
                 break;
         }
