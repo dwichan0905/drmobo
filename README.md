@@ -1,2 +1,2 @@
-# drmobo
-dr. Mobo - Aplikasi Pakar Untuk Analisis Masalah Pada Motherboard Komputer
+# MOBOcare
+MOBOcare - Aplikasi Pakar Untuk Analisis Masalah Pada Motherboard Komputer
