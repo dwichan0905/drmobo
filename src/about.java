@@ -62,7 +62,7 @@ public class about extends javax.swing.JFrame {
         jTextArea2.setEditable(false);
         jTextArea2.setColumns(20);
         jTextArea2.setRows(5);
-        jTextArea2.setText("\n1. Dwi Candra Permana\t=> Penulis Code\n2. Mar'atun Solehah\t=> Desainer UI/UX\n3. Fendi Riawan\t=> Desainer UI/UX");
+        jTextArea2.setText("\n1. Dwi Candra Permana\t=> Penulis Code\n2. Mar'atun Solehah\t=> Designer UI/UX dan Penulis Kode\n3. Fendi Riawan\t=> Designer UI/UX");
         jScrollPane2.setViewportView(jTextArea2);
 
         jLabel4.setFont(new java.awt.Font("Times New Roman", 1, 12)); // NOI18N

@@ -139,7 +139,7 @@
                 <Property name="editable" type="boolean" value="false"/>
                 <Property name="columns" type="int" value="20"/>
                 <Property name="rows" type="int" value="5"/>
-                <Property name="text" type="java.lang.String" value="&#xa;1. Dwi Candra Permana&#x9;=&gt; Penulis Code&#xa;2. Mar&apos;atun Solehah&#x9;=&gt; Desainer UI/UX&#xa;3. Fendi Riawan&#x9;=&gt; Desainer UI/UX"/>
+                <Property name="text" type="java.lang.String" value="&#xa;1. Dwi Candra Permana&#x9;=&gt; Penulis Code&#xa;2. Mar&apos;atun Solehah&#x9;=&gt; Designer UI/UX dan Penulis Kode&#xa;3. Fendi Riawan&#x9;=&gt; Designer UI/UX"/>
               </Properties>
             </Component>
           </SubComponents>
