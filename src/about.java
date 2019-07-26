@@ -43,7 +43,7 @@ public class about extends javax.swing.JFrame {
 
         jLabel1.setFont(new java.awt.Font("Times New Roman", 1, 18)); // NOI18N
         jLabel1.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        jLabel1.setText("Dr. Mobo");
+        jLabel1.setText("MOBOcare");
 
         jLabel2.setFont(new java.awt.Font("Times New Roman", 1, 12)); // NOI18N
         jLabel2.setText("Deskripsi Aplikasi : ");
@@ -52,7 +52,7 @@ public class about extends javax.swing.JFrame {
         jTextArea1.setColumns(20);
         jTextArea1.setLineWrap(true);
         jTextArea1.setRows(5);
-        jTextArea1.setText("Dr. Mobo merupakan sebuah aplikasi sistem pakar yang menangani atau memberikan solusi pada kasus kerusakan motherboard. Aplikasi ini dapat menganalisa kerusakan pada motherboard sehingga memberikan solusi yang tepat untuk dilakukan .");
+        jTextArea1.setText("MOBOcare merupakan sebuah aplikasi sistem pakar yang menangani atau memberikan solusi pada kasus kerusakan motherboard. Aplikasi ini dapat menganalisa kerusakan pada motherboard sehingga memberikan solusi yang tepat untuk dilakukan .");
         jTextArea1.setWrapStyleWord(true);
         jScrollPane1.setViewportView(jTextArea1);
 

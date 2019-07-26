@@ -89,7 +89,7 @@
               <Font name="Times New Roman" size="18" style="1"/>
             </Property>
             <Property name="horizontalAlignment" type="int" value="0"/>
-            <Property name="text" type="java.lang.String" value="Dr. Mobo"/>
+            <Property name="text" type="java.lang.String" value="MOBOcare"/>
           </Properties>
         </Component>
         <Component class="javax.swing.JLabel" name="jLabel2">
@@ -113,7 +113,7 @@
                 <Property name="columns" type="int" value="20"/>
                 <Property name="lineWrap" type="boolean" value="true"/>
                 <Property name="rows" type="int" value="5"/>
-                <Property name="text" type="java.lang.String" value="Dr. Mobo merupakan sebuah aplikasi sistem pakar yang menangani atau memberikan solusi pada kasus kerusakan motherboard. Aplikasi ini dapat menganalisa kerusakan pada motherboard sehingga memberikan solusi yang tepat untuk dilakukan ."/>
+                <Property name="text" type="java.lang.String" value="MOBOcare merupakan sebuah aplikasi sistem pakar yang menangani atau memberikan solusi pada kasus kerusakan motherboard. Aplikasi ini dapat menganalisa kerusakan pada motherboard sehingga memberikan solusi yang tepat untuk dilakukan ."/>
                 <Property name="wrapStyleWord" type="boolean" value="true"/>
               </Properties>
             </Component>
