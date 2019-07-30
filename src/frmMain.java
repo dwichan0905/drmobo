@@ -1,6 +1,12 @@
 
+import java.awt.Image;
 import java.awt.Toolkit;
+import java.io.IOException;
+import java.util.logging.Level;
+import java.util.logging.Logger;
+import javax.imageio.ImageIO;
 import javax.swing.DefaultComboBoxModel;
+import javax.swing.ImageIcon;
 import javax.swing.JOptionPane;
 
 /*
@@ -21,7 +27,13 @@ public class frmMain extends javax.swing.JFrame {
      * Creates new form frmMain
      */
     public frmMain() {
-        initComponents();
+        try {
+            initComponents();
+            Image image = ImageIO.read(this.getClass().getResource("/res/icon.png"));
+            this.setIconImage(image);
+        } catch (IOException ex) {
+            Logger.getLogger(frmMain.class.getName()).log(Level.SEVERE, null, ex);
+        }
     }
 
     /**
@@ -51,7 +63,6 @@ public class frmMain extends javax.swing.JFrame {
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setTitle("MOBOcare - Sistem Pakar Analisis Masalah Motherboard Komputer");
         setResizable(false);
-        setType(java.awt.Window.Type.UTILITY);
 
         jPanel1.setBorder(javax.swing.BorderFactory.createTitledBorder("Merk Motherboard"));
 
